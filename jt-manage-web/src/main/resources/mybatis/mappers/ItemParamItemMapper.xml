@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jt.manage.mapper.ItemParamItemMapper">
+
+	<update id="updateParamByItemId" parameterType="ItemParamItem">
+		UPDATE tb_item_param_item
+		SET 
+		 param_data = #{paramData},
+		 updated = NOW()
+		WHERE
+			item_id = #{itemId}
+	</update>
+	
+</mapper>
